@@ -1,8 +1,7 @@
 import React from 'react';
 import Hereo from '../assets/heroe.png';
 import Slider from 'react-slick';
-import { Box, CardActions, CardContent, IconButton, Stack, Typography } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import {Stack, Typography } from '@mui/material';
 import ShareIcon from '@mui/icons-material/Share';
 
 const Heroes = ({ type }) => {
@@ -46,15 +45,15 @@ const Heroes = ({ type }) => {
   return (
     <Stack direction="column" alignItems="center" justifyContent={'center'}>
       <Stack direction="column" alignItems="center" justifyContent={'center'}>
-        <Typography variant="h4" fontWeight={600} m={0} sx={{ color: '#D23538' }}>
+        <Typography variant="h4" fontWeight={600}sx={{ color: '#D23538', paddingTop:{lg:'3rem', sm:'2rem', xs:'0'} }}>
           ابطال خلف الكواليس
         </Typography>
         {type === 'CoWorkers' ? (
-          <Typography variant="h4" fontWeight={600} m={0} sx={{ color: 'black' }}>
+          <Typography variant="body1" fontWeight={600} m={0} sx={{ color: 'black' }}>
             فريق عمل نادي الزمالك
           </Typography>
         ) : (
-          <Typography variant="h4" fontWeight={600} m={0} sx={{ color: 'black' }}>
+          <Typography variant="body1" fontWeight={600} m={0} sx={{ color: 'black' }}>
             فريق عمل الإنتاج الفني
           </Typography>
         )}
@@ -62,7 +61,7 @@ const Heroes = ({ type }) => {
       <Stack
         // id="heroes"
         className="d-flex justify-content-evenly align-items-center "
-        style={{ marginBottom: '3rem', width: '99%' }}
+        style={{ marginBottom: '3rem', width: '90%' }}
       >
         {/* --------------------------------------------------------------------- */}
         <Slider

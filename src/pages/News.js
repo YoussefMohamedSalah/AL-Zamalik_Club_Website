@@ -1,9 +1,11 @@
 import React from 'react';
+import { NewsMainSection } from '../components/NewsMainSection';
+
 
 const News = () => {
   return (
     <div>
-      <p>news</p>
+      <NewsMainSection />
     </div>
   );
 };

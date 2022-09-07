@@ -16,7 +16,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 // ----------------------------------------------------------------------
 
-const DRAWER_WIDTH = 280;
+// const DRAWER_WIDTH = 280;
 const APPBAR_MOBILE = 64;
 const APPBAR_DESKTOP = 92;
 
@@ -52,7 +52,10 @@ const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
 }));
 
 const StyledToolbar = styled(Toolbar)({
-  justifyContent: 'space-evenly ',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexWrap: 'wrap-reverse',
 });
 const LoginBotton = styled(Button)({
   backgroundColor: 'black',
@@ -125,14 +128,24 @@ export default function DashboardNavbar({ onOpenSidebar }) {
             {/*  */}
           </Stack>
         </Box>
-        <Box flex={1}>
-          <Stack direction="row" gap={2} alignItems="center" justifyContent={'center'} style={{ color: 'black' }}>
+        <Box flex={1} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Stack direction="row" alignItems="center" justifyContent={'center'} style={{ color: 'black' }}>
             <RouterLink to="/" style={{ textDecoration: 'none' }}>
-              <StyledToolbar>
-                <Typography variant="h4" fontWeight={600} m={0} sx={{ color: 'black' }}>
+              <StyledToolbar style={{ padding: '0', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <Typography
+                  variant="h4"
+                  fontWeight={600}
+                  m={0}
+                  sx={{ color: 'black', fontSize: { lg: '30px', md: '20px', sm: '15px' } }}
+                >
                   نادي الزمالك
                 </Typography>
-                <Box component="img" m={1} src={logo2} sx={{ width: { xs: '35px', sm: '45px', lg: '65px' } }} />
+                <Box
+                  component="img"
+                  m={1}
+                  src={logo2}
+                  sx={{ width: { xs: '35px', sm: '40px', md: '50px', lg: '65px' } }}
+                />
               </StyledToolbar>
             </RouterLink>
           </Stack>

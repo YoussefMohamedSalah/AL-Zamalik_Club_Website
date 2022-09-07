@@ -4,8 +4,7 @@ import Alkahera from '../assets/alkahera.png';
 import Aletehad from '../assets/etehad.png';
 import Fenway from '../assets/fenway.png';
 import Altaieb from '../assets/TIB-logo-NEW-04.png';
-import { Box, Stack, Card, CardMedia } from '@mui/material';
-import { styled } from '@mui/material/styles';
+import { Box, Stack } from '@mui/material';
 
 const Sponcers = () => {
   //   const imgSizing = { height: { lg: '1rem', sm: '18rem', xs: '17rem' } };
