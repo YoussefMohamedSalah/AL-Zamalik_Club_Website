@@ -10,7 +10,7 @@ const Heroes = ({ type }) => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     speed: 1000,
     cssEase: 'linear',
     pauseOnHover: true,

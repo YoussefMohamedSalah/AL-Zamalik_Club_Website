@@ -1,48 +1,83 @@
 import React from 'react';
 import Mortada from '../assets/Mortada.jpg';
-import { Box, Stack, Typography,Chip } from '@mui/material';
+import { Box, Stack, Typography, Chip } from '@mui/material';
 import smallSlide from '../assets/smallslide.png';
 import videoPlay from '../assets/play-video-icon-png-7.png';
 import MainRightTop from '../assets/MainTeam.png';
 import MainLeftTop from '../assets/peace.png';
 import MainLeftBottom from '../assets/coach.png';
 import { red } from '@mui/material/colors';
+import { styled } from '@mui/material/styles';
 
+// 
+const ShadowBox = styled(Box)({
+  clipPath: "polygon(75% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  zIndex: "22",
+  width: "100%",
+  height: "100%",
+  backgroundColor: "#20202085",
+  alignSelf: "center",
+  position: 'absolute',
+  direction: "rtl",
+
+});
 
 export const NewsMainSection = ({ Dir, txtDir, imgDir, sxImage }) => {
-    const Redcolor = red[500];
 
   return (
-    <Stack direction="row" alignItems="top" justifyContent="space-between" gap={1}>
-      <Box>
-        <Stack direction="Column">
-          <Box flex={1}>
+    <Stack
+      direction="row"
+      alignItems="top"
+      justifyContent="space-between"
+      gap={1}
+      sx={{ paddingTop: { xs: '0px', lg: '2rem' } }}
+    >
+      {/* left section */}
+      <Box flex={68}>
+        <Stack direction="Column" style={{ color: 'white' }}>
+          <Box flex={1} style={{ backgroundColor: ' rgba(0, 0, 0, 0.5)' }}>
             <Stack
-            direction="row"
-            alignItems="center" justifyContent="center"
-              style={{ position:'relative' }}
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+              style={{ position: 'relative', cursor: 'pointer', background: ' rgba(0, 0, 0, 0.5)!important' }}
             >
-              <img src={MainLeftTop} alt="Notebook" style={{ width: '100%', backgroundSize: 'cover' }} />
+              <img
+                src={MainLeftTop}
+                alt="Notebook"
+                style={{ width: '100%', backgroundSize: 'cover', filter: 'brightness(0.5)' }}
+              />
               {/* txt section */}
-              <Stack direction="Column" justifyContent="space-between" >
-                <Stack direction="row" justifyContent="end" alignItems="top">
-                  <Box id="padge_Black">
-                    <Typography variant='body1'>حصرياً</Typography>
-                  </Box>
-                  <Chip label="حصرياً" onClick={()=> console.log('clicked')}  style={{background:'black', color:'white', width:'6rem'}}/>
-                  <Chip label="فيديو" onClick={()=> console.log('clicked')}  style={{background:'red', color:'white', width:'6rem'}}/>
-                  <Box id="padge_Red">
-                    <Typography variant='body1'>فيديو</Typography>
-                  </Box>
+              <Stack
+                direction="Column"
+                justifyContent="space-between"
+                style={{ position: 'absolute', height: '94%', width: '95%' }}
+              >
+                <Stack direction="row" justifyContent="end" alignItems="top" gap={1}>
+                  <Chip
+                    label="حصرياً"
+                    as="overline"
+                    onClick={() => console.log('clicked')}
+                    style={{ background: 'black', color: 'white', width: '5rem' }}
+                  />
+                  <Chip
+                    label="فيديو"
+                    as="overline"
+                    onClick={() => console.log('clicked')}
+                    style={{ background: 'red', color: 'white', width: '5rem' }}
+                  />
+                  {/* <Box id="padge_Red">
+                    <Typography variant="h6">فيديو</Typography>
+                  </Box> */}
                 </Stack>
                 {/* icon */}
-                <img src={videoPlay} alt="Notebook" style={{ width: '30%', alignSelf: 'center', cursor: 'pointer' }} />
+                <img src={videoPlay} alt="Notebook" style={{ width: '20%', alignSelf: 'center', cursor: 'pointer' }} />
                 {/* txt */}
                 <Box>
                   <Box dir="rtl">
-                    <Typography variant='h6'>كلمات غريبة غير مفهومة غرضها اظهار لطاقة التصميم</Typography>
-                    <Typography variant='h5'>هل عاد حمودة من جديد؟</Typography>
-                    <Typography variant='body1'>شائعات منتشرة وحمودة لن أعود ابداً</Typography>
+                    <Typography variant="h6">كلمات غريبة غير مفهومة غرضها اظهار لطاقة التصميم</Typography>
+                    <Typography variant="h5">هل عاد حمودة من جديد؟</Typography>
+                    <Typography variant="body1">شائعات منتشرة وحمودة لن أعود ابداً</Typography>
                   </Box>
                 </Box>
               </Stack>
@@ -50,56 +85,242 @@ export const NewsMainSection = ({ Dir, txtDir, imgDir, sxImage }) => {
             </Stack>
             {/* top end */}
           </Box>
-          <Box flex={1}></Box>
+          {/* box 2 in the right section */}
+          <Box flex={1}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+              style={{ position: 'relative', cursor: 'pointer' }}
+            >
+              <img
+                src={MainLeftBottom}
+                alt="Notebook"
+                style={{ width: '100%', backgroundSize: 'cover', filter: 'brightness(0.5)' }}
+              />
+              {/* txt section */}
+              <Stack
+                direction="Column"
+                justifyContent="space-between"
+                style={{ position: 'absolute', height: '94%', width: '95%' }}
+              >
+                <Stack direction="row" justifyContent="end" alignItems="top" gap={1}>
+                  {/* <Box id="padge_Black">
+                    <Typography variant="body1">حصرياً</Typography>
+                  </Box> */}
+                  <Chip
+                    label="حصرياً"
+                    as="overline"
+                    onClick={() => console.log('clicked')}
+                    style={{ background: 'black', color: 'white', width: '5rem' }}
+                  />
+                  <Chip
+                    label="فيديو"
+                    as="overline"
+                    onClick={() => console.log('clicked')}
+                    style={{ background: 'red', color: 'white', width: '5rem' }}
+                  />
+                  {/* <Box id="padge_Red">
+                    <Typography variant="h6">فيديو</Typography>
+                  </Box> */}
+                </Stack>
+                {/* icon */}
+                <img src={videoPlay} alt="Notebook" style={{ width: '20%', alignSelf: 'center', cursor: 'pointer' }} />
+                {/* txt */}
+                <Box>
+                  <Box dir="rtl">
+                    <Typography variant="h6">كلمات غريبة غير مفهومة غرضها اظهار لطاقة التصميم</Typography>
+                    <Typography variant="h5">هل عاد حمودة من جديد؟</Typography>
+                    <Typography variant="body1">شائعات منتشرة وحمودة لن أعود ابداً</Typography>
+                  </Box>
+                </Box>
+              </Stack>
+              {/* txt section end */}
+            </Stack>
+            {/* top end */}
+          </Box>
         </Stack>
       </Box>
-      {/* ====== */}
-      <Box>
-        <Stack direction="Column">
-          <Box flex={1}></Box>
-          <Stack direction="row" gap={1} flex={1}></Stack>
+      {/* right section */}
+      <Box flex={100} style={{ color: 'white' }}>
+        <Stack direction="Column" gap={1}>
+          <Box>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+              style={{ position: 'relative', cursor: 'pointer' }}
+            >
+              <img
+                src={MainRightTop}
+                alt="Notebook"
+                style={{ width: '100%', backgroundSize: 'cover' }}
+              />
+              <ShadowBox></ShadowBox>
+              {/* txt section */}
+              <Stack
+                direction="Column"
+                justifyContent="flex-end"
+                style={{ position: 'absolute', height: '94%', width: '95%', zIndex:'33' }}
+              >
+                <Box>
+                  <Box dir="rtl">
+                    <Typography variant="h4"> الخليفة المأمون يعود ليلعب بالزمالك...ـ</Typography>
+                    <Typography variant="h5">
+                      إنطلاقة مهمة جداً للنادي يجب عليك قرأتها والفوز 2-1 لصالح الزمالك
+                    </Typography>
+                  </Box>
+                </Box>
+              </Stack>
+              {/* txt section end */}
+            </Stack>
+            {/* top end */}
+          </Box>
+          <Box>
+            <Stack direction="row" gap={1}>
+              <Box flex={1}>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  style={{ position: 'relative', cursor: 'pointer' }}
+                >
+                  <img
+                    src={MainLeftTop}
+                    alt="Notebook"
+                    style={{ width: '100%', backgroundSize: 'cover', filter: 'brightness(0.5)' }}
+                  />
+                  {/* txt section */}
+                  <Stack
+                    direction="Column"
+                    justifyContent="space-between"
+                    style={{ position: 'absolute', height: '94%', width: '95%' }}
+                  >
+                    <Stack direction="row" justifyContent="end" alignItems="top" gap={1}>
+                      <Chip
+                        label="حصرياً"
+                        as="overline"
+                        onClick={() => console.log('clicked')}
+                        style={{ background: 'black', color: 'white', width: '5rem' }}
+                      />
+                      <Chip
+                        label="فيديو"
+                        as="overline"
+                        onClick={() => console.log('clicked')}
+                        style={{ background: 'red', color: 'white', width: '5rem' }}
+                      />
+                    </Stack>
+
+                    {/* txt */}
+                    <Box>
+                      <Box dir="rtl">
+                        <Typography variant="body2">كلمات غريبة غير مفهومة غرضها اظهار لطاقة التصميم</Typography>
+                        <Typography variant="h6">هل عاد حمودة من جديد؟</Typography>
+                        <Typography variant="body1">شائعات منتشرة وحمودة لن أعود ابداً</Typography>
+                      </Box>
+                    </Box>
+                  </Stack>
+                  {/* txt section end */}
+                </Stack>
+                {/* top end */}
+              </Box>
+              <Box flex={1}>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  style={{ position: 'relative', cursor: 'pointer' }}
+                >
+                  <img
+                    src={MainLeftTop}
+                    alt="Notebook"
+                    style={{ width: '100%', backgroundSize: 'cover', filter: 'brightness(0.5)' }}
+                  />
+                  {/* txt section */}
+                  <Stack
+                    direction="Column"
+                    justifyContent="space-between"
+                    style={{ position: 'absolute', height: '94%', width: '95%' }}
+                  >
+                    <Stack direction="row" justifyContent="end" alignItems="top" gap={1}>
+                      <Chip
+                        label="حصرياً"
+                        as="overline"
+                        onClick={() => console.log('clicked')}
+                        style={{ background: 'black', color: 'white', width: '5rem' }}
+                      />
+                      <Chip
+                        label="فيديو"
+                        as="overline"
+                        onClick={() => console.log('clicked')}
+                        style={{ background: 'red', color: 'white', width: '5rem' }}
+                      />
+                    </Stack>
+
+                    {/* txt */}
+                    <Box>
+                      <Box dir="rtl">
+                        <Typography variant="body2">كلمات غريبة غير مفهومة غرضها اظهار لطاقة التصميم</Typography>
+                        <Typography variant="h6">هل عاد حمودة من جديد؟</Typography>
+                        <Typography variant="body1">شائعات منتشرة وحمودة لن أعود ابداً</Typography>
+                      </Box>
+                    </Box>
+                  </Stack>
+                  {/* txt section end */}
+                </Stack>
+                {/* top end */}
+              </Box>
+              <Box flex={1}>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="center"
+                  style={{ position: 'relative', cursor: 'pointer' }}
+                >
+                  <img
+                    src={MainLeftTop}
+                    alt="Notebook"
+                    style={{ width: '100%', backgroundSize: 'cover', filter: 'brightness(0.5)' }}
+                  />
+                  {/* txt section */}
+                  <Stack
+                    direction="Column"
+                    justifyContent="space-between"
+                    style={{ position: 'absolute', height: '94%', width: '95%' }}
+                  >
+                    <Stack direction="row" justifyContent="end" alignItems="top" gap={1}>
+                      <Chip
+                        label="حصرياً"
+                        as="overline"
+                        onClick={() => console.log('clicked')}
+                        style={{ background: 'black', color: 'white', width: '5rem' }}
+                      />
+                      <Chip
+                        label="فيديو"
+                        as="overline"
+                        onClick={() => console.log('clicked')}
+                        style={{ background: 'red', color: 'white', width: '5rem' }}
+                      />
+                    </Stack>
+
+                    {/* txt */}
+                    <Box>
+                      <Box dir="rtl">
+                        <Typography variant="body2">كلمات غريبة غير مفهومة غرضها اظهار لطاقة التصميم</Typography>
+                        <Typography variant="h6">هل عاد حمودة من جديد؟</Typography>
+                        <Typography variant="body1">شائعات منتشرة وحمودة لن أعود ابداً</Typography>
+                      </Box>
+                    </Box>
+                  </Stack>
+                  {/* txt section end */}
+                </Stack>
+                {/* top end */}
+              </Box>
+            </Stack>
+          </Box>
         </Stack>
       </Box>
+      {/* end of the right section */}
     </Stack>
-    // <Stack
-    //   direction="row"
-    //   alignItems="top"
-    //   justifyContent="space-between"
-    //   dir={Dir}
-    //   sx={{ minHeight: { lg: '100%' }, display: { lg: 'flex', xs: 'contents' } }}
-    // >
-    //   <Box sx={sxImage} flex={1}>
-    //     <img src={Mortada} alt="mortada masour"  />
-    //   </Box>
-    //   <Box flex={1} >
-    //   <Stack
-    //     sx={{padding:{lg:'2rem' , sm:'1rem', md:'1rem', xs:'1rem'}}}
-    //     direction="column"
-    //     gap={1}
-    //     // style={Dir === 'rtl' ? { padding:'4rem 0rem 0rem 10rem'} : { padding:'5rem 3rem 10rem 0rem'}}
-    //   >
-    //     <Typography variant="h4" dir={txtDir}>
-    //       مرتضي منصور
-    //     </Typography>
-    //     <Typography variant="h6" fontWeight={500} dir={txtDir}>
-    //       كان منصور عضوًا في مجلس النواب المصري مرتين. الأولى كانت في العام 2000 حيث استمر فيه حتى العام 2005، والثانية
-    //       كانت في العام 2015، حيث استمر فيه حتى العام 2020.رياضيًا، كان منصور رئيسًا لنادي نادي الزمالك لفترة وجيزة في
-    //       العامين 2005 و2006 وكذلك مرة أخرى منذ العام 2014 حتى الآن خلال مباراة في الدوري المصري الممتاز بين نادي
-    //       الإسماعيلي ونادي الاتحاد السكندري اندلع شغب بالمباراة ثم تبادل الجميع الإتهامات. الإتهام الأكبر كان للاعب شهير
-    //       لعب حينها للنادي الإسماعيلي والإدانة تحوط به من كل جانب فما كان بمنصور، حين كان حديث عهد بالمهنة وكيلًا للنائب
-    //       العام المصري، إلا أن قرر حبس اللاعب أربعة أيام على ذمة التحقيق مع مراعاة التجديد طبقًا لسير التحقيقات بدلًا من
-    //       تفادي التصادم مع راعي النادي الإسماعيلي عثمان أحمد عثمان صهر الرئيس المصري أنور السادات
-    //     </Typography>
-    //     <Stack direction="column">
-    //       <Typography variant="h5" dir={txtDir}>
-    //         رئيس مجلس الإدارة{' '}
-    //       </Typography>
-    //       <Typography variant="subtitle1" dir={txtDir}>
-    //         <span style={{ color: 'red' }}>من </span>2002 <span style={{ color: 'red' }}>الي</span> 2030
-    //       </Typography>
-    //     </Stack>
-    //   </Stack>
-    //   </Box>
-    // </Stack>
   );
 };
