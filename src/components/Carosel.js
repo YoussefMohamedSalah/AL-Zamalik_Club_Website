@@ -3,7 +3,7 @@ import Trophe from '../assets/trophe.png';
 import Slider from 'react-slick';
 import { Box, Stack, Typography } from '@mui/material';
 
-const Team = () => {
+const Carosel = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -219,4 +219,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Carosel;

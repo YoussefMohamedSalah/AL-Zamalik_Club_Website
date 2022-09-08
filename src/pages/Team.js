@@ -53,7 +53,7 @@ const Team = () => {
   const typeProduction = 'Production';
   return (
     <Page title="Team">
-      <StyledMainSection id="first_section" >
+      <StyledMainSection >
         <MainSection Dir={LDir} txtDir={txtDir} sxImage={sxLeft} />
         <MainSection Dir={RDir} txtDir={txtDir} sxImage={sxRight} />
       </StyledMainSection>

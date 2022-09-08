@@ -1,0 +1,14 @@
+
+.player_carosel_info img {
+    filter: brightness(0.6);
+    height: 28rem;
+    transition: 0.7s ease-out;
+    border-radius:6px;
+    
+}
+.player_carosel_info:hover img {
+    filter: brightness(0.6);
+    height: 30rem;
+    transition: 0.7s ease-out;
+    background: linear-gradient(#FF0800, white,white, #FF0800);
+  }

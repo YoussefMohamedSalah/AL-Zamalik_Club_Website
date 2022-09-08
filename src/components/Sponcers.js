@@ -14,7 +14,7 @@ const Sponcers = () => {
       direction="row"
       alignItems="center"
       justifyContent="space-between"
-      style={{ padding: { lg: '1rem', sm: '0.4rem', xs: '0.1rem' } }}
+      sx={{ padding: { lg: '1rem', sm: '0.4rem', xs: '0.1rem' } }}
     >
       <Box sx={{ minWidth: 40, padding: { lg: '1rem', sm: '0.4rem', xs: '0.1rem' } }}>
         <img src={Altaieb} alt="sponcer" />

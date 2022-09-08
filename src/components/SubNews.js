@@ -24,11 +24,17 @@ export const SubNews = ({ Dir, txtDir, imgDir, sxImage }) => {
   return (
     <Stack
       direction="column"
-      alignItems="top"
-      justifyContent="space-between"
+      alignItems="center"
+      justifyContent="center"
       gap={1}
       sx={{ paddingTop: { xs: '0px', lg: '2rem' } }}
     >
+      <Stack direction='column'
+      alignItems='center'
+      justifyContent='center'>
+      <Typography sx={{color:"red"}} variant='h3'>اخر الأخبار</Typography>
+      <Typography variant='h6' >ماذا يحدث  بالنادي</Typography>
+      </Stack>
       {/* left section */}
       <Box flex={1}>
         <Stack direction="row" style={{ color: 'white' }} gap={1}>

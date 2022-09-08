@@ -9,7 +9,9 @@ import { styled } from '@mui/material/styles';
 import CaroselBG from '../assets/trophiesBackGround.png';
 import BG from '../assets/Rectangle_2_ct@2x.png';
 import Sponcers from '../components/Sponcers';
-import Heroes from '../components/Heroes';
+import { SubNews } from '../components/SubNews';
+import { Players } from '../components/Players';
+import { ImagesGroup } from '../components/ImagesGroup';
 //
 const StyledCaroselBox = styled(Box)({
   background: `url(${CaroselBG})`,
@@ -19,25 +21,15 @@ const StyledSponsersBox = styled(Box)({
   background: `url(${BG})`,
   backgroundSize: 'cover',
 });
-const StyledHerouesBox = styled(Box)({
-  background: `url(${BG})`,
-  backgroundSize: 'cover',
-  Height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  // paddingTop: '3rem',
-  // margin: 'auto',
-  overflow: 'auto',
-});
 const Home = () => {
-  const typeCoWorkers = 'CoWorkers';
-  const typeProduction = 'Production';
+
   return (
     <Page title="Home">
-      <StyledHerouesBox>
-        <Heroes type={typeCoWorkers} />
-        <Heroes type={typeProduction} />
-      </StyledHerouesBox>
+      <ImagesGroup />
+      {/* -------------------------- */}
+      <Players />
+      {/* -------------------------- */}
+      <SubNews />
       {/* -------------------------- */}
       <StyledSponsersBox
         sx={{ height: { lg: '19rem', sm: '13rem', xs: '10rem' }, display: 'flex', alignItems: 'center' }}

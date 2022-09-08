@@ -1,0 +1,61 @@
+
+
+
+.slide-text-div {
+  z-index: 1000;
+  width: 20rem;
+  direction: rtl;
+  position: absolute;
+  
+}
+#num1 img {
+    width: 35rem;
+    height: 70vh;
+    z-index: 11;
+    left: -15%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  
+  #num2 img {
+    width: 36rem;
+    height: 70vh;
+    z-index: 10;
+    left: 5%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  #num3 img {
+    width: 32rem;
+    height: 70vh;
+    z-index: 12;
+    left: 25%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  #num4 img {
+    width: 38rem;
+    height: 70vh;
+    z-index: 17;
+    left: 60%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
+  #num5 img {
+    width: 32rem;
+    height: 70vh;
+    z-index: 14;
+    left: 43%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+  }
